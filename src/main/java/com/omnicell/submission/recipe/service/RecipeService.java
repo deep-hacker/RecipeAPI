@@ -16,9 +16,9 @@ public class RecipeService {
 
     public List<Recipe> findAll() {
 
-         Iterable<Recipe> = recipeRepository.findAll();
+         Iterable<Recipe> it = recipeRepository.findAll();
 
-        List<Recipe> = new ArrayList<Recipe>();
+        List<Recipe> recipes = new ArrayList<Recipe>();
         it.forEach(e -> recipes.add(e));
 
         return recipes;
