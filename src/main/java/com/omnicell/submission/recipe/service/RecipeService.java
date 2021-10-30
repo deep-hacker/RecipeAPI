@@ -16,16 +16,16 @@ public class RecipeService {
 
     public List<Recipe> findAll() {
 
-        var it = recipeRepository.findAll();
+         Iterable<Recipe> = recipeRepository.findAll();
 
-        var recipes = new ArrayList<Recipe>();
+        List<Recipe> = new ArrayList<Recipe>();
         it.forEach(e -> recipes.add(e));
 
         return recipes;
     }
 
     public Recipe findById(Long id) {
-        var recipe = recipeRepository.findById(id);
+        Optional<Recipe> recipe = recipeRepository.findById(id);
         return recipe.orElse(null);
     }
 
